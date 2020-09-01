@@ -1,2 +1,12 @@
-<p>video-list works!</p>
-<pre>{{ videos | json }}</pre>
+<h3>Video List</h3>
+<ul>
+  <li *ngFor="let video of videos; index as i">
+    <h5>Video {{ i + 1 }}</h5>
+    Author: {{ video.author }}
+    <br />
+    Title: {{ video.title }}
+    <br />
+    Regions:
+    <span *ngFor="let detail of video.viewDetails">{{ detail.region }}</span>
+  </li>
+</ul>

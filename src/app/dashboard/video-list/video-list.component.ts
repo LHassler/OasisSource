@@ -1,5 +1,7 @@
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { VideoData } from '../../video-data';
+
 
 @Component({
   selector: 'app-video-list',
@@ -17,5 +19,7 @@ export class VideoListComponent {
     this.selectedVideo = video;
 
     this.videoSelected.emit(video);
+
   }
+
 }

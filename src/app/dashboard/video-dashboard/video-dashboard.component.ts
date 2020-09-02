@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { VideoData, videoData } from '../../video-data';
+import {Component, OnInit, Output} from '@angular/core';
+import {VideoData, videoData} from '../../video-data';
 
 @Component({
   selector: 'app-video-dashboard',
@@ -8,6 +8,7 @@ import { VideoData, videoData } from '../../video-data';
 })
 export class VideoDashboardComponent implements OnInit {
   videoList = videoData;
+
 
   currentVideo: VideoData;
 

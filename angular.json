@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "workshop-app"
+    }
+  },
+  "defaultProject": "workshop-app",
+  "cli": {
+    "analytics": "5b8e5e6f-b0cb-42d0-b65f-4ffc8aac381f"
+  }
 }

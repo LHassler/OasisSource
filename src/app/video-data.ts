@@ -1,4 +1,4 @@
-export interface ViewDetails {
+export interface ViewDetails{
   age: number;
   region: string;
   date: string;

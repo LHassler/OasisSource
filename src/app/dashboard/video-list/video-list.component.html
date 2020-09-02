@@ -1,6 +1,10 @@
 <h3>Video List</h3>
 <ul>
-  <li *ngFor="let video of videos; index as i">
+  <li
+    *ngFor="let video of videos; index as i"
+    [class.video-selected]="video === selectedVideo"
+    (click)="selectVideo(video)"
+  >
     <h5>Video {{ i + 1 }}</h5>
     Author: {{ video.author }}
     <br />

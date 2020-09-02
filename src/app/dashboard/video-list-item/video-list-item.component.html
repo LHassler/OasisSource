@@ -1,0 +1,7 @@
+<h5>Video {{ videoNumber + 1 }}</h5>
+Author: {{ videoData.author }}
+<br />
+Title: {{ videoData.title }}
+<br />
+Regions:
+<span *ngFor="let detail of videoData.viewDetails">{{ detail.region }} </span>

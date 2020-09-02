@@ -5,12 +5,9 @@
     [class.video-selected]="video === selectedVideo"
     (click)="selectVideo(video)"
   >
-    <h5>Video {{ i + 1 }}</h5>
-    Author: {{ video.author }}
-    <br />
-    Title: {{ video.title }}
-    <br />
-    Regions:
-    <span *ngFor="let detail of video.viewDetails">{{ detail.region }} </span>
+    <app-video-list-item
+      [videoData]="video"
+      [videoNumber]="i"
+    ></app-video-list-item>
   </li>
 </ul>

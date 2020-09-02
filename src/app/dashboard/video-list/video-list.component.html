@@ -1,13 +1,8 @@
 <h3>Video List</h3>
-<ul>
-  <li
-    *ngFor="let video of videos; index as i"
-    [class.video-selected]="video === selectedVideo"
-    (click)="selectVideo(video)"
-  >
-    <app-video-list-item
-      [videoData]="video"
-      [videoNumber]="i"
-    ></app-video-list-item>
-  </li>
-</ul>
+<app-video-list-item
+  *ngFor="let video of videos; index as i"
+  [class.video-selected]="video === selectedVideo"
+  (click)="selectVideo(video)"
+  [videoData]="video"
+  [videoNumber]="i"
+></app-video-list-item>

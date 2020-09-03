@@ -1,43 +1,23 @@
-<section class="card">
-  <div class="card-content">
-    <div class="card-title"><h2>Stat Filters</h2></div>
-    <br>
-    <form [formGroup]="statFilter" (ngSubmit)="saveStatFilter()">
-      <div>
-        <label for="author">Author Name:  </label>
-          <input id="author" type="text" formControlName="author">
-        <div *ngIf="
-            statFilter.get('author')?.hasError('required') &&
-            statFilter.get('author')?.touched ">
-          <b>Please enter author name</b>
-        </div>
-        <br>
-        <br>
-        <label for="age">Age:  </label>
-          <input id="age" type="number" formControlName="age">
-        <div *ngFor="statFilter.get('age')?.hasError('required') &&
-                    statFilter.get('age')?.touched">
-          <b>Please enter real age</b>
-        </div>
 
-        <br>
-        <br>
-        <button class="btn btn-primary" [disabled]="!statFilter.valid">
-          Submit
-        </button>
-      </div>
-    </form>
+<p>stat-filters works!</p>
+<form [formGroup]="statForm">
+  <div>
+    <label for="foo">Author</label>
+    <input id="foo" type="text" formControlName="author" />
   </div>
-</section>
-<br>
-<br>
+
+  <div>
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title" />
+  </div>
+</form>
 <section class="card">
   <div class="card-content">
-    <div class="card-title"><h4>Form Data</h4></div>
-    <br>
+    <div class="card-title">Form Data</div>
+
     Form Value Object:
-    <pre>{{ statFilter.value | json }}</pre>
+    <pre>{{ statForm.value | json }}</pre>
     Form Validity:
-    <div>{{ statFilter.valid }}</div>
+    <div>{{ statForm.valid }}</div>
   </div>
 </section>

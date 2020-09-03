@@ -24,6 +24,8 @@ let routes: Routes = [
     StatFiltersComponent,
     VideoListItemComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes), HttpClientModule, ReactiveFormsModule],
+
+  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule, HttpClientModule],
+
 })
 export class DashboardModule {}

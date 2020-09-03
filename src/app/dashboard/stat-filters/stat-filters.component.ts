@@ -7,17 +7,15 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./stat-filters.component.scss'],
 })
 export class StatFiltersComponent implements OnInit {
-  statFilter: FormGroup;
 
-  constructor(fb: FormBuilder) {
-    this.statFilter = fb.group({
-      author: ['', Validators.required],
-      age: ['', Validators.max(2)],
-    })
-  }
+  statForm: FormGroup;
 
-  saveStatFilter(): void {
-    console.log('Form submitted fool', this.statFilter.value);
+  constructor(formBuilder: FormBuilder) {
+    this.statForm = formBuilder.group({
+      author: ['Kyle Cordes', Validators.required],
+      title: [''],
+    });
+
   }
 
   ngOnInit(): void {}

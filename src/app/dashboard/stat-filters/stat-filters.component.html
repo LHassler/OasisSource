@@ -1,1 +1,22 @@
 <p>stat-filters works!</p>
+<form [formGroup]="statForm">
+  <div>
+    <label for="foo">Author</label>
+    <input id="foo" type="text" formControlName="author" />
+  </div>
+
+  <div>
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title" />
+  </div>
+</form>
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Form Data</div>
+
+    Form Value Object:
+    <pre>{{ statForm.value | json }}</pre>
+    Form Validity:
+    <div>{{ statForm.valid }}</div>
+  </div>
+</section>

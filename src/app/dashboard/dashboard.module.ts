@@ -7,6 +7,7 @@ import { StatFiltersComponent } from './stat-filters/stat-filters.component';
 import { RouterModule, Routes } from '@angular/router';
 import { VideoListItemComponent } from './video-list-item/video-list-item.component';
 import { HttpClientModule } from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 let routes: Routes = [
   {
@@ -23,6 +24,6 @@ let routes: Routes = [
     StatFiltersComponent,
     VideoListItemComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes),HttpClientModule],
+  imports: [CommonModule, RouterModule.forChild(routes), HttpClientModule, ReactiveFormsModule],
 })
 export class DashboardModule {}
